@@ -1,0 +1,54 @@
+﻿<UserControl
+    x:Class="NotificationListenerActionCenterApp.Controls.MyToastNotificationControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NotificationListenerActionCenterApp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Padding="10,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border
+            Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+            Width="16"
+            Height="16"
+            Margin="0,0,10,0"
+            VerticalAlignment="Top">
+            <Image
+                x:Name="ImageAppIcon"
+                Stretch="Uniform"/>
+        </Border>
+
+        <StackPanel
+            Grid.Column="1"
+            Margin="0,-5,0,0">
+
+            <StackPanel
+                x:Name="StackPanelTextElements"/>
+
+            <StackPanel Orientation="Horizontal" Opacity="0.6">
+                <TextBlock
+                    x:Name="TextBlockTime"
+                    Text="7:09a"
+                    Style="{ThemeResource CaptionTextBlockStyle}"/>
+                <TextBlock
+                    Text="·"
+                    Margin="3,0"
+                    Style="{ThemeResource CaptionTextBlockStyle}"/>
+                <TextBlock
+                    x:Name="TextBlockAppName"
+                    Text="Facebook"
+                    Style="{ThemeResource CaptionTextBlockStyle}"/>
+            </StackPanel>
+
+        </StackPanel>
+        
+    </Grid>
+</UserControl>
